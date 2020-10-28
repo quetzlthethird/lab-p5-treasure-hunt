@@ -40,16 +40,22 @@ class Player {
     this.image = img ;
   }
   moveUp() {
+    if (this.row > 0) {
     this.row -= 100
   }
+  }
   moveDown() {
-    this.row += 100
+    if (this.row < 900){
+    this.row += 100}
   }
   moveLeft() {
-    this.col -= 100
+    if (this.col >0){
+    this.col -= 100}
   }
   moveRight() {
+    if (this.col < 900){
     this.col += 100
+  }
   }
   preload(){
     this.image = loadImage('/assets/character-down.png');
